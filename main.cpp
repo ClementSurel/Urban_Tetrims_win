@@ -55,7 +55,7 @@ int main ( int argc, char** argv )
     }
 
     /* Open the windows */
-    SDL_Surface *icon = IMG_Load("Sprites/wall.png");
+    SDL_Surface *icon = IMG_Load("wall.png");
     SDL_WM_SetIcon (icon, NULL);
     SDL_WM_SetCaption ("Urban Tetrims", NULL);
     screen = SDL_SetVideoMode(WINDOW_WIDTH, WINDOW_HEIGHT, 32, SDL_HWSURFACE|SDL_DOUBLEBUF);

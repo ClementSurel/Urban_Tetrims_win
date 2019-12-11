@@ -33,7 +33,7 @@ Uint8 initSprites (Sprites *sprites, SDL_Surface *screen)
     sprites->nbLines = NULL;
 
     /* Loads the wall texture */
-    sprites->texture = IMG_Load("Sprites/wall.png");
+    sprites->texture = IMG_Load("wall.png");
     if (sprites->texture == NULL)
     {
         fprintf(stdout, "Texture sprites has not been successfully loaded\n");
@@ -59,7 +59,7 @@ Uint8 initSprites (Sprites *sprites, SDL_Surface *screen)
     }
 
     /* Load the main font */
-    sprites->main_font = TTF_OpenFont("Fonts/painting_with_chocolate.ttf", 80);
+    sprites->main_font = TTF_OpenFont("painting_with_chocolate.ttf", 80);
     if (sprites->main_font == NULL)
     {
         fprintf(stdout, "An error occurred during memory allocation for the main font\n");
@@ -67,7 +67,7 @@ Uint8 initSprites (Sprites *sprites, SDL_Surface *screen)
     }
 
     /* Load the panel texts of the interface */
-    sprites->font = TTF_OpenFont("Fonts/high_school_usa_sans.ttf", 22);
+    sprites->font = TTF_OpenFont("high_school_usa_sans.ttf", 22);
     if (sprites->font == NULL)
     {
         fprintf(stdout, "An error occurred during memory allocation for the font\n");
@@ -470,15 +470,15 @@ int menuControls (SDL_Surface *screen, SDL_Surface *background)
     SDL_Event event;
     SDL_Surface *controls_bg = NULL, *external_rect = NULL, *internal_rect = NULL;
     SDL_Surface *keyboard = NULL;
-    TTF_Font *street36 = TTF_OpenFont ("Fonts/high_school_usa_sans.ttf", 36);
-    TTF_Font *street18 = TTF_OpenFont ("Fonts/high_school_usa_sans.ttf", 18);
+    TTF_Font *street36 = TTF_OpenFont ("high_school_usa_sans.ttf", 36);
+    TTF_Font *street18 = TTF_OpenFont ("high_school_usa_sans.ttf", 18);
     SDL_Color txt_white = {255, 255, 255};
     SDL_Surface *controls = NULL, *text = NULL;
     SDL_Rect part, position;
     int i;
 
     /* Load the keyboard image */
-    keyboard = IMG_Load("Sprites/keyboard.png");
+    keyboard = IMG_Load("keyboard.png");
 
     /* Set up the background using the title screen's background as a model*/
     controls_bg = SDL_CreateRGBSurface (SDL_HWSURFACE, WINDOW_WIDTH, WINDOW_HEIGHT, 32, 0, 0, 0, 0);
@@ -583,7 +583,7 @@ int pause (SDL_Surface *screen)
     SDL_BlitSurface (screen, NULL, background, NULL);
 
     /* Print pause text */
-    font = TTF_OpenFont ("Fonts/high_school_usa_sans.ttf", 60);
+    font = TTF_OpenFont ("high_school_usa_sans.ttf", 60);
     pause = TTF_RenderText_Blended (font, "PAUSE", black);
     position.x = WINDOW_WIDTH/2 - pause->w/2;
     position.y = WINDOW_HEIGHT/2 - pause->h/2;
